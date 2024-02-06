@@ -1,0 +1,14 @@
+<%- include('partials/head') %>
+<body class="d-flex flex-column min-vh-100">
+    <%- include('partials/navbar') %>
+    <main class="flex-grow-1">
+    <h1>All The Cats</h1>
+    <ul>
+        <% for(let cat of cats){ %>
+            <li><%= cat %></li>
+            <% } %>
+    </ul>
+    <%- include('partials/footer') %>
+    </main>
+</body>
+</html>

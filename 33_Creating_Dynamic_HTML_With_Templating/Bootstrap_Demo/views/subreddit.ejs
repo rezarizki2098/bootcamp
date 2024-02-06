@@ -1,0 +1,28 @@
+<%- include('partials/head') %>
+<body class="d-flex flex-column min-vh-100">
+    <%- include('partials/navbar') %>
+    <main class="flex-grow-1">
+    <div class="container">
+        <h1><%=description %></h1>
+        <ul>
+            <% posts.forEach(function(post){ %>
+                <li>
+                    <p>Title : <%=post.title%> </p>
+                    <ul>
+                        <p>Author : <%=post.author %> </p>
+                        <%if (post.img){%>
+                            <img src="<%= post.img %>" alt="">
+                        <%}%>
+                    </ul>
+                </li>
+                <hr>
+            <%})%>
+
+        </ul>
+        <p>Total Subscribe <%= subscribers %></p>
+    </div>
+    </main>
+    <%- include('partials/footer') %>
+
+</body>
+</html>
